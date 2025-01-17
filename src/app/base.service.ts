@@ -1,14 +1,19 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BaseService {
-  private bank = "http://localhost:3000/name"
+  getNames() {
+    throw new Error('Method not implemented.');
+  }
 
-  constructor(private http:HttpClient) { }
-  getDatas(){
-    return this.http.get(this.bank)
+  private apiUrl = 'http://localhost:3000/name';
+
+  constructor(private http: HttpClient) {}
+  getDatas(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrl);  
   }
 }
