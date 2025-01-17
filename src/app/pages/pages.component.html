@@ -1,4 +1,3 @@
-
 <div class="container my-5 p-4 shadow-lg bg-dark text-white rounded">
     <h1 class="text-center mb-4">Data Table</h1>
     <table class="table table-bordered table-hover text-white">
@@ -11,9 +10,10 @@
         <tr *ngFor="let name of name">
           <td>{{ name.id }}</td>  
           <td>{{ name.name }}</td> 
-          <td>{{ name.value }}</td> 
-          <td>{{ name.category }}</td>  
-          <td>{{ name.timestamp }}</td> 
+          <td>{{ name.capital }}</td> 
+          <td>{{ name.population }}</td>  
+          <td>{{ name.area }}</td> 
+          <td>{{ name.flag }}</td> 
         </tr>
       </tbody>
     </table>
